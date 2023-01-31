@@ -30,10 +30,10 @@ jobs:
         touch database/database.sqlite
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
-        DB_CONNECTION: mysql
-        DB_HOST: "95.217.159.77"
-        DB_PORT: "2083"
-        DB_DATABASE: universe
-        DB_USERNAME: univers3
-        DB_PASSWORD: )7EmLZ*08vt9bH
+        base_directory: "/mnt/HC_Volume_26529915/univers3/"
+        ssh_user: "univers3"
+        ssh_port: 2083
+        ssh_host: "95.217.159.77"
+        private_ssh_key: "${secrets.SSH_KEY}"
+        ssh_known_host: "${secrets.SSH_KNOWN_HOST}"
       run: vendor/bin/phpunit
