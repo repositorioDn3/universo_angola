@@ -3,14 +3,17 @@
 
       <div class="section-title">
         <h2>Galeria</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p>
+            Encontre aqui os projectos em desenvolvimento e desenvolvidos.
+
+        </p>
       </div>
 
       <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
         <li data-filter="*" class="filter-active">Todos</li>
-        <li data-filter=".filter-app">App</li>
-        <li data-filter=".filter-card">Card</li>
-        <li data-filter=".filter-web">Web</li>
+        <li data-filter=".filter-app">Sistemas Web</li>
+        <li data-filter=".filter-card">Sistemas Desktop</li>
+        <li data-filter=".filter-web">Websites</li>
       </ul>
 
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">

@@ -1,7 +1,7 @@
 .logotipo_universo{
-    width: 10rem;
-    height: 20rem !important;
-    border-radius: 5px;
+    width: 1px;
+    height: 1px !important;
+    border-radius: .5px;
 }
 
   .whatsapp_icon{
@@ -9,5 +9,16 @@
     font-weight: bold;
     font-size: 1.5rem !important;
   }
+  /*Texto de apresentação da empresa*/
+  .text_about{
+    text-align: justify !important;
+  }
+  .title_services{
+    font-size: 18px !important;
+  }
+  .card_bottom{
+    margin-top:1rem !important;
+  }
+
 
 
