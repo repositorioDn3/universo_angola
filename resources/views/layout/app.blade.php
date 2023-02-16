@@ -32,6 +32,7 @@
   <link href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
   <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
   <link href="{{asset('assets/css/custom.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/css/slide-show.css')}}" rel="stylesheet">
 
   <!--FontAwesome-->
   <link href="{{asset('assets/css/all.min.css')}}" rel="stylesheet">
@@ -40,22 +41,22 @@
 
 <body>
  <!-- ======= Header ======= -->
- <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
+ <header id="header" class="fixed-top shadow" style="background: #195da7">
+    <div class="container d-flex align-items-center" >
 
-      <h1 class="logo me-auto"><a href="/">
-        UA
-    </a></h1>
-      <nav id="navbar" class="navbar" >
+      <h1 class=" me-auto">
+       <a href="/"><img src="{{asset('assets/img/logo.png')}}" alt="logotipo da Universo Angola" style="height: 3.5rem !important;"></a>
+      </h1>
+      <nav id="navbar" class="navbar " >
         <ul>
           <li><a class="nav-link scrollto {{(Route::Current()->getName() === 'about')? 'text-white':'active'}} " href="/">Início</a></li>
-          <li><a class="nav-link scrollto {{(Route::Current()->getName() === 'about')? 'active':''}}" href="{{route('about')}}">Sobre</a></li>
+          <li><a class="nav-link scrollto {{(Route::Current()->getName() === 'about')? 'active':''}}" href="{{route('about')}}/#about">Sobre</a></li>
           <li><a class="nav-link scrollto" href="../#services">Serviços</a></li>
           <li><a class="nav-link scrollto" href="../#gallery">Galeria</a></li>
           <li><a class="nav-link scrollto" href="../#contact">Contacto</a></li>
           <li>
             <a class="getstarted scrollto" href="https://api.whatsapp.com/send?phone=244&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." target="_blank" title="Contactar pelo whatsapp">
-                Fale Conosco
+                Fale Connosco
                 <i class="bi bi-whatsapp text-success whatsapp_icon"></i>
             </a>
         </li>
@@ -66,28 +67,59 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center ">
+<!-- SlideShow -->
+ <section class="slider">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Encontre Aqui Os Melhores Produtos e Serviços</h1>
-          <h2>Alavanque o Nível da sua Empresa</h2>
-          <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="https://www.dn3-angola.com" target="_blank" class="btn-get-started scrollto">
-                Nossa Loja
-                <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
+    <div class="slides">
+        <!--radios buttons-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+        <!-- end radios buttons-->
+
+        <!--slides images-->
+            <div class="slide first caption-title">
+                {{-- <div class="container col-lg-12">
+                    <div class="row container-caption">
+                      <div class="caption-title text-center text-light col-lg-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                        <h1>Better Solutions For Your Business</h1>
+                      </div>
+                    </div>
+                  </div> --}}
+                <img src="{{asset('assets/img/slide-1.jpg')}}" alt="slide-1" />
+            </div>
+            <div class="slide">
+
+                <img src="{{asset('assets/img/slide-2.jpg')}}" alt="slide-1" />
+            </div>
+            <div class="slide">
+
+                <img src="{{asset('assets/img/slide-3.jpg')}}" alt="slide-1" />
+            </div>
+            <div class="slide">
+          
+                <img src="{{asset('assets/img/slide-4.jpg')}}" alt="slide-1" />
+            </div>
+        <!-- end slides images-->
+        <!-- Navigate-->
+        <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
         </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/why-us.png" class="img-fluid animated" alt="">
-        </div>
-      </div>
+        <!-- end Navigate-->
     </div>
-
-  </section><!-- End Hero -->
+    <!--Manual Navigation-->
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    <!--End Manual Navigation-->
+</section>
 
   <main id="main">
     @if(Route::Current()->getName() === 'home')
@@ -181,6 +213,7 @@
   <!--fontawesome-->
   <script src="{{asset('assets/js/all.min.js')}}"></script>
   <script src="{{asset('assets/js/fontawesome.min.js')}}"></script>
+  <script src="{{asset('assets/js/slide-show.js')}}"></script>
 </body>
 
 </html>

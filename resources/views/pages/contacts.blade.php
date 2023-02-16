@@ -42,20 +42,20 @@
             <div class="row">
               <div class="form-group col-md-6">
                 <label for="name">Nome</label>
-                <input type="text" name="name" class="form-control" id="name" required>
+                <input type="text" name="name" placeholder="Digite Seu Nome" class="form-control" id="name" required>
               </div>
               <div class="form-group col-md-6">
                 <label for="name">E-mail</label>
-                <input type="email" class="form-control" name="email" id="email" required>
+                <input type="email" placeholder="Digite Seu E-mail" class="form-control" name="email" id="email" required>
               </div>
             </div>
             <div class="form-group">
               <label for="name">Assunto</label>
-              <input type="text" class="form-control" name="subject" id="subject" required>
+              <input type="text" placeholder="Digite o Assunto Assunto" class="form-control" name="subject" id="subject" required>
             </div>
             <div class="form-group">
               <label for="name">Mensagem</label>
-              <textarea style="resize: none" class="form-control" name="message" rows="10" required></textarea>
+              <textarea style="resize: none" class="form-control" name="message" rows="10" required placeholder="Mensagem"></textarea>
             </div>
             <div class="text-center"><button type="submit">Enviar</button></div>
           </form>
